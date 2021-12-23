@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1441961321 source:/home/guitarlo/mode7/main.cpp
+	<iostream>
+	"cgraphics.h"
+	<SDL2/SDL.h>
+
+1441961361 /home/guitarlo/mode7/include/cgraphics.h
+	<SDL2/SDL.h>
+	<stdio.h>
+	<math.h>
+
+1441961366 source:/home/guitarlo/mode7/src/cgraphics.cpp
+	"cgraphics.h"
+
+1441963565 source:/home/guitarlo/SDL_mode7/src/cgraphics.cpp
+	"cgraphics.h"
+
+1441961361 /home/guitarlo/SDL_mode7/include/cgraphics.h
+	<SDL2/SDL.h>
+	<stdio.h>
+	<math.h>
+
+1441963502 source:/home/guitarlo/SDL_mode7/main.cpp
+	<iostream>
+	"cgraphics.h"
+	<SDL2/SDL.h>
+
+1466243455 source:/home/guitarlo/prg/SDL_mode7/main.cpp
+	<iostream>
+	"cgraphics.h"
+	<SDL2/SDL.h>
+
+1466158620 /home/guitarlo/prg/SDL_mode7/include/cgraphics.h
+	<SDL2/SDL.h>
+
+1466243770 source:/home/guitarlo/prg/SDL_mode7/src/cgraphics.cpp
+	"cgraphics.h"
+	<stdio.h>
+	<math.h>
+
+1489230187 source:/home/sbox/Dropbox/prog/SDL_mode7/main.cpp
+	<iostream>
+	"cgraphics.h"
+	<SDL2/SDL.h>
+
+1489230182 /home/sbox/Dropbox/prog/SDL_mode7/include/cgraphics.h
+	<SDL2/SDL.h>
+
+1489230222 source:/home/sbox/Dropbox/prog/SDL_mode7/src/cgraphics.cpp
+	"cgraphics.h"
+	<stdio.h>
+	<math.h>
+
+1479745542 source:/home/sbox/Documents/SDL_mode7/main.cpp
+	<iostream>
+	"cgraphics.h"
+	<SDL2/SDL.h>
+
+1466165820 /home/sbox/Documents/SDL_mode7/include/cgraphics.h
+	<SDL2/SDL.h>
+
+1479742815 source:/home/sbox/Documents/SDL_mode7/src/cgraphics.cpp
+	"cgraphics.h"
+	<stdio.h>
+	<math.h>
+
+1489230187 source:/home/guitarlo/Nextcloud/prog/SDL_mode7/main.cpp
+	<iostream>
+	"cgraphics.h"
+	<SDL2/SDL.h>
+
+1489230182 /home/guitarlo/Nextcloud/prog/SDL_mode7/include/cgraphics.h
+	<SDL2/SDL.h>
+
+1489230222 source:/home/guitarlo/Nextcloud/prog/SDL_mode7/src/cgraphics.cpp
+	"cgraphics.h"
+	<stdio.h>
+	<math.h>
+
+1639645489 source:c:\users\cmansfeld\apps\codeblocks\sdl_mode7\main.cpp
+	<iostream>
+	"cgraphics.h"
+
+1636733431 c:\users\cmansfeld\apps\codeblocks\sdl_mode7\include\cgraphics.h
+	<SDL2/SDL.h>
+
+1636734549 source:c:\users\cmansfeld\apps\codeblocks\sdl_mode7\src\cgraphics.cpp
+	"cgraphics.h"
+	<stdio.h>
+	<math.h>
+
