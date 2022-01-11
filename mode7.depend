@@ -77,14 +77,14 @@
 	<stdio.h>
 	<math.h>
 
-1639645489 source:c:\users\cmansfeld\apps\codeblocks\sdl_mode7\main.cpp
+1640258498 source:c:\users\cmansfeld\apps\codeblocks\sdl_mode7\main.cpp
 	<iostream>
 	"cgraphics.h"
 
-1636733431 c:\users\cmansfeld\apps\codeblocks\sdl_mode7\include\cgraphics.h
+1640256771 c:\users\cmansfeld\apps\codeblocks\sdl_mode7\include\cgraphics.h
 	<SDL2/SDL.h>
 
-1636734549 source:c:\users\cmansfeld\apps\codeblocks\sdl_mode7\src\cgraphics.cpp
+1640258398 source:c:\users\cmansfeld\apps\codeblocks\sdl_mode7\src\cgraphics.cpp
 	"cgraphics.h"
 	<stdio.h>
 	<math.h>

@@ -77,6 +77,48 @@ void cgraphic::mode7 (SDL_Surface *screen,SDL_Surface *tile, float angle,float c
 
 }
 
+void cgraphic::mode7top (SDL_Surface *screen,SDL_Surface *tile, float angle,float cx, float cy, mode7params *params)
+{
+
+    float screenx,screeny,
+    distance,horizonscale;
+    int maskx=tile->w-1,
+    masky=tile->h-1;
+    float spacex,spacey,
+    linex,liney;
+
+    for (screeny=(screen->h/2); screeny > 0;screeny--)
+    {
+        distance = (params->space_z * params->scaley) / (screeny + params->horizon);
+        horizonscale=(distance / params->scalex);
+
+
+        linex= (-SDL_sinf(angle) * horizonscale);
+        liney= (SDL_cosf(angle) * horizonscale);
+
+
+        spacex=cx+(distance * SDL_cosf(angle))- screen->w/2  * linex;
+        spacey=cy+(distance * SDL_sinf(angle))- screen->h/2  * liney;
+
+
+        for (screenx=0; screenx < screen->w;screenx++)
+        {
+            putpixel (screen,
+                      (int)screenx,
+                      (int)screeny,
+                      getpixel (tile,
+                                (int)spacex &maskx,
+                                (int)spacey &masky ));
+
+            spacex += linex;
+            spacey += liney;
+        }
+
+    }
+
+}
+
+
 void cgraphic::putpixel(SDL_Surface *bmp,int x, int y, int c)
 {
     int bpp = bmp->format->BytesPerPixel;

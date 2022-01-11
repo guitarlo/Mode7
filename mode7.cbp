@@ -15,11 +15,6 @@
 					<Add option="-g" />
 					<Add directory="include" />
 				</Compiler>
-				<Linker>
-					<Add option="-lmingw32" />
-					<Add option="-lSDL2main" />
-					<Add option="-lSDL2" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/mode7" prefix_auto="1" extension_auto="1" />
@@ -40,6 +35,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Linker>
+			<Add option="-lmingw32" />
+			<Add option="-lSDL2main" />
 			<Add option="-lSDL2" />
 		</Linker>
 		<Unit filename="include/cgraphics.h" />
