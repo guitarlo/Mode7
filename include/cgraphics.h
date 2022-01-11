@@ -18,6 +18,8 @@ class cgraphic
         void render(SDL_Surface* screen);
         void SetFullscreen(int i);
         void mode7(SDL_Surface *bmp,SDL_Surface *tile, float angle,float cx, float cy, mode7params *params);
+        void mode7top(SDL_Surface *bmp,SDL_Surface *tile, float angle,float cx, float cy, mode7params *params);
+
         void putpixel(SDL_Surface *bmp ,int  x,int y,int c);
         Uint32 getpixel(SDL_Surface *bmp ,int  x,int y);
 
