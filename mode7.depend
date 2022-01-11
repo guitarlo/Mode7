@@ -89,3 +89,15 @@
 	<stdio.h>
 	<math.h>
 
+1640258498 source:c:\users\cmansfeld\onedrive - meschede.schule\documents\github\mode7\main.cpp
+	<iostream>
+	"cgraphics.h"
+
+1640256771 c:\users\cmansfeld\onedrive - meschede.schule\documents\github\mode7\include\cgraphics.h
+	<SDL2/SDL.h>
+
+1640258398 source:c:\users\cmansfeld\onedrive - meschede.schule\documents\github\mode7\src\cgraphics.cpp
+	"cgraphics.h"
+	<stdio.h>
+	<math.h>
+

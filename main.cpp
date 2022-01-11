@@ -7,13 +7,13 @@ cgraphic *g;
 
 SDL_Event e;
 SDL_Surface *tile,*bg;
-
+const int maxfps= 1000/60;
 float posx=100,posy=100;
 int quit;
 
 float angle=0;
 bool  moveup,movedown,turnleft,turnright;
-
+Uint32 startTimer,delayTimer;
 mode7params params,paramstop;
 
 
@@ -40,10 +40,11 @@ int main(int argc, char *argv[])
 
     while (!quit)
     {
+        startTimer=SDL_GetTicks();
         if (moveup)
         {
-            posx+=SDL_cosf(angle)*1.5;
-            posy+=SDL_sinf(angle)*1.5;
+            posx+=SDL_cosf(angle)*4;
+            posy+=SDL_sinf(angle)*4;
         }
         if (movedown)
         {
@@ -52,13 +53,13 @@ int main(int argc, char *argv[])
         }
         if(turnleft)
         {
-            angle-=0.01;
+            angle-=0.05;
 
 
         }
         if(turnright)
         {
-            angle+=0.01;
+            angle+=0.05;
 
 
         }
@@ -75,7 +76,9 @@ int main(int argc, char *argv[])
 
     }
 
-
+    delayTimer=SDL_GetTicks()-startTimer;
+    if(delayTimer < maxfps)
+        SDL_Delay(maxfps-delayTimer);
     delete g;
     return 0;
 }
