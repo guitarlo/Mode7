@@ -14,7 +14,8 @@ int quit;
 float angle=0;
 bool  moveup,movedown,turnleft,turnright;
 
-mode7params params;
+mode7params params,paramstop;
+
 
 void ControlCheck();
 
@@ -23,13 +24,19 @@ int main(int argc, char *argv[])
 {
     g=new cgraphic(1024,748);
     tile=SDL_LoadBMP("GFX/map.bmp");
-    bg=SDL_LoadBMP("GFX/bg.bmp");
-    SDL_Rect r_bg{0,0,1024,768};
+    bg=SDL_LoadBMP("GFX/clouds.bmp");
+
 
     params.horizon=-350;
     params.scalex=500;
     params.scaley=500;
     params.space_z=20;
+
+
+    paramstop.horizon=-350;
+    paramstop.scalex=500;
+    paramstop.scaley=500;
+    paramstop.space_z=20;
 
     while (!quit)
     {
@@ -46,31 +53,28 @@ int main(int argc, char *argv[])
         if(turnleft)
         {
             angle-=0.01;
-            r_bg.x-=1;
+
 
         }
         if(turnright)
         {
             angle+=0.01;
-            r_bg.x+=1;
+
 
         }
 
-        if (r_bg.x <=0)
-            r_bg.x+=1024;
-
-        if (r_bg.x>=1024)
-            r_bg.x+=-1024;
 
 
-        //SDL_FillRect(g->screen,NULL,SDL_MapRGB(g->screen->format,0x00,0x00,0x00));
-        SDL_BlitSurface(bg,&r_bg,g->screen,NULL);
+
+        SDL_FillRect(g->screen,NULL,SDL_MapRGB(g->screen->format,0xAA,0xAA,0xFF));
+
         g->mode7(g->screen,tile,angle,posx,posy,&params);
-
+        g->mode7top(g->screen,bg,angle,-posx,-posy,&params);
         g->render(g->screen);
         ControlCheck();
 
     }
+
 
     delete g;
     return 0;
